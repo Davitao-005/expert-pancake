@@ -1,0 +1,32 @@
+[
+  {
+    "id": "E01",
+    "title": "E01 single TTL pulse",
+    "defaultLines": 129,
+    "coreLines": 23
+  },
+  {
+    "id": "E02",
+    "title": "E02 serial TTL pulses",
+    "defaultLines": 161,
+    "coreLines": 31
+  },
+  {
+    "id": "E03",
+    "title": "E03 parallel TTL pulses",
+    "defaultLines": 151,
+    "coreLines": 33
+  },
+  {
+    "id": "E04",
+    "title": "E04 single DDS pulse",
+    "defaultLines": 198,
+    "coreLines": 29
+  },
+  {
+    "id": "E05",
+    "title": "E05 mixed DDS and TTL",
+    "defaultLines": 305,
+    "coreLines": 49
+  }
+]
