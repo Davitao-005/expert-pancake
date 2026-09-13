@@ -1,5 +1,22 @@
 # Development Log
 
+## 2026-09-13 EDT
+
+### README 交接文档完善
+
+- 根据现有 generator、回归测试和 2026-08-05/06 的格式讨论，新增完整的 timeline → Python scheduling contract。
+- 明确多通道代码采用一个外层 `with parallel`，每个物理通道对应一个 `with sequential` lane；同通道任务按开始时间排序并使用 lane-local gap。
+- 说明单通道省略冗余 wrapper、固定与 duration sweep 的 gap 来源差异、固定硬件 lane 顺序，以及 DDS `set_att()` / `set()` 必须位于对应 task lane 的原因。
+- 新增生成 class 的 host/kernel 结构、不同 sweep/counter/repetition/batch 组合的代码结构选择表，以及 `break_realtime()` 与 physical sequence gap 的区别。
+- 新增基础功能对照表、多参数 zipped sweep、DDS phase 语义和 UI/导入边界说明。
+- 修正 README Counter 示例，使其与当前 `gate_*()` + `fetch_count()` 生成路径一致。
+
+### 测试记录
+
+- `git diff --check`
+- `npm run test:generator`
+- `npm run build`
+
 ## 2026-08-06 HKT
 
 ### Plot applet 改用 Dashboard CCB 自动打开
